@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8F449F6A-FF42-4FBA-A459-DBBD346807AE}</ProjectGuid>
+    <ProjectGuid>{04CF89E9-6D46-4F27-9F30-0712FA920A96}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WindowsAppPubs</RootNamespace>
-    <AssemblyName>WindowsAppPubs</AssemblyName>
+    <RootNamespace>WindowsFrmStore</RootNamespace>
+    <AssemblyName>WindowsFrmStore</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,17 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,48 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminDatos\DacAuthor.cs" />
-    <Compile Include="AdminDatos\DacStore.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmStore.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmStore.Designer.cs">
-      <DependentUpon>frmStore.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmAuthor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAuthor.Designer.cs">
-      <DependentUpon>frmAuthor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Author.cs" />
-    <Compile Include="Models\Discount.cs" />
-    <Compile Include="Models\Employee.cs" />
-    <Compile Include="Models\Job.cs" />
-    <Compile Include="Models\PubsContext.cs" />
-    <Compile Include="Models\Publisher.cs" />
-    <Compile Include="Models\Pubinfo.cs" />
-    <Compile Include="Models\Roysched.cs" />
-    <Compile Include="Models\Sale.cs" />
-    <Compile Include="Models\Store.cs" />
-    <Compile Include="Models\Title.cs" />
-    <Compile Include="Models\Titleauthor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmStore.resx">
-      <DependentUpon>frmStore.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmAuthor.resx">
-      <DependentUpon>frmAuthor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -107,8 +66,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Models\ClassDiagram1.cd" />
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -121,6 +78,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WindowsAppPubs\WindowsAppPubs.csproj">
+      <Project>{8F449F6A-FF42-4FBA-A459-DBBD346807AE}</Project>
+      <Name>WindowsAppPubs</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
